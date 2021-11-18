@@ -16,6 +16,7 @@ void ADomeAligned::BeginPlay()
 {
 	Super::BeginPlay();
 	DomeOrigin = GetActorLocation();
+
 	
 }
 
@@ -26,6 +27,5 @@ void ADomeAligned::Tick(float DeltaTime)
 	FVector2D LatCorr = FVector2D(-LatLon.X + (PI / 2.0), LatLon.Y);
 	FVector SphereLocation = LatCorr.SphericalToUnitCartesian();
 	SetActorLocation(DomeOrigin + SphereLocation * DomeRadius);
-
 }
 

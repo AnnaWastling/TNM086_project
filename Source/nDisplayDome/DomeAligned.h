@@ -22,11 +22,13 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	FVector DomeOrigin;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float DomeRadius = 740;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FVector2D LatLon = { 1.0f,0.0f };
+	FVector DomeOrigin;
+
+	UPROPERTY(EditAnywhere, BluePrintReadWrite)
+		float DomeRadius = 740;
+
+	UPROPERTY(EditAnywhere, BluePrintReadWrite)
+		FVector2D LatLon = { 1.f, 1.f };
 
 };
